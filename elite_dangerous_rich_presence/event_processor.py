@@ -47,7 +47,7 @@ SHIPS = {
     "federation_corvette": "Federal Corvette",
     "cutter": "Imperial Cutter",
     # Taxi
-    "adder_taxt": "Taxi",
+    "adder_taxi": "Taxi",
 }
 
 SUITS = {
@@ -126,13 +126,13 @@ class EventProcessor:
 
                 self.reset_state()
                 self.status = Status.MAIN_MENU
-                self.starsystem = "Mainmenu"
+                self.starsystem = "Main Menu"
                 self.secs_elapsed = iso_to_unix(timestamp)
 
             case {"event": "Music", "MusicTrack": "MainMenu"}:
                 self.reset_state()
                 self.status = Status.MAIN_MENU
-                self.starsystem = "Mainmenu"
+                self.starsystem = "Main Menu"
 
             case (
                 {"event": "Shutdown", "timestamp": timestamp}
